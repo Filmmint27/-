@@ -223,10 +223,36 @@ function sendQuote() {
         "quote-qty"
     ).value;
 
-    let province =
+    let branch =
+    document.getElementById(
+        "quote-branch"
+    ).value;
+
+    let delivery =
+    document.getElementById(
+        "quote-delivery"
+    ).value;
+
+    let amphure =
+    document.getElementById(
+        "quote-amphure"
+    ).value;
+
+    let district =
+    document.getElementById(
+        "quote-district"
+    ).value;
+
+    let provinceSelect =
     document.getElementById(
         "quote-province"
-    ).value;
+    );
+    let province =
+    provinceSelect.options[
+        provinceSelect.selectedIndex
+    ].text;
+
+
 
     let address =
     document.getElementById(
@@ -268,11 +294,19 @@ function sendQuote() {
 
             email: email,
 
+            branch: branch,
+
             product: product,
 
             qty: qty,
 
+            delivery: delivery,
+
             province: province,
+
+            amphure: amphure,
+
+            district: district,
 
             address: address,
 
