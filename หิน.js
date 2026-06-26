@@ -367,7 +367,7 @@ function confirmPayment() {
     ].text;
 
     let payment =
-    document.getElementById("payment").value;
+    document.getElementById("payment-method").value;
 
     let delivery =
     document.getElementById("delivery").value;
@@ -496,7 +496,9 @@ delivery === "delivery"
             localStorage.getItem("cart")
         )[0].qty,
 
-        delivery: deliveryText})
+        delivery: deliveryText,
+
+        payment: payment})
 })
 
     alert("สั่งซื้อสำเร็จ!");
